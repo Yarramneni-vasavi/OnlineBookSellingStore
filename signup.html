@@ -1,0 +1,99 @@
+<html>
+<head>
+<style>
+	body{
+			background-image: url(book1.png);
+	}
+	#f1{
+		border-radius: 25px;
+		border: 5px solid navy;
+		box-shadow: 7px 7px 20px 5px #e5e4e2;
+		background-color:#ffffff;
+		width:700;
+		height:400;
+	}
+	#f2{
+		width: 100%;
+		height: 20%;
+	}
+	h1{
+		text-align: left;
+		padding-left: 30px; 
+		font:italic bold 20px/30px Georgia, serif;
+	}
+	#signup{
+		width: 150px;
+		height: 50px;
+		background-color:green;
+		color:white;
+	}
+	head{
+		width: 100%;
+		height: 100%;
+	}
+</style>
+</head>
+<body>
+	<center>
+		<div id="f2"> </div>
+		<div id="f1"><h1>SELL BOOKS, MAKE MONEY...</h1></br>
+				<script>
+				function validate()
+				{
+				var username = document.getElementById('username');
+				var emailid = document.getElementById('emailid');
+				var mobilno = document.getElementById('mobileno');
+				var enter = document.getElementById('enter');
+				var reenter = document.getElementById('reenter');
+				if(username.value=='')
+				{
+					alert('please enter your name');
+					return false;
+				}
+				if(emailid.value=='')
+				{
+					alert('please enter your emailID');
+					return false;
+				}
+				if(mobileno.value=='')
+				{
+					alert('please enter your mobileno');
+					return false;
+				}
+				if(enter.value=='')
+				{
+					alert('please enter your password');
+					return false;
+				}
+				if(reenter.value=='')
+				{
+					alert('please enter your password again');
+					return false;
+				}
+				if(enter.value!=reenter.value)
+				{
+					alert('password doesnt match');
+					return false;
+				}
+				}
+				</script>
+				<p>
+					<form method="get" onsubmit= "return validate()" action="signup.php" >
+						<label><b><em> Username :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em><b></label>
+						<input type="text" id="username" name="username" placeholder="Type here"></br></br> 
+						<label><em>EmailID :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></label>
+						<input type="email" id="emailid" name="emailid" placeholder="Type here"></br></br>
+						<label><em>Mobileno :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></label>
+						<input type="number" id="mobileno" name="mobileno" placeholder="Type here"></br></br>
+						<label><em>Enter password :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></label>
+						<input type="password" id="enter" name="enter" placeholder="Type here"></br></br>
+						<label><em>Re-enter password :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></label>
+						<input type="password" id="reenter" name="reenter" placeholder="Type here"></br></br></br>
+
+						<input type="submit" name="signup" id="signup" value="SIGNUP"></br>
+					</form>
+				</p></br>
+		</div>
+	</center>	
+</body>
+</html>
